@@ -175,6 +175,14 @@ task buildAndCopyToMods(type: Copy, dependsOn: 'build') {
     include "*.jar"
 }
 
+task copyModToRunMods(type: Copy, dependsOn: 'build') {
+    from "build/libs"
+    into "run/mods"
+    include "*.jar"
+}
+
+runClient.dependsOn copyModToRunMods
+
 // Task that will build the mod and put it in the "run" folder, and then run the client.
 task buildCopyToRunModsAndRun(type: Copy, dependsOn: 'build') {
     from "build/libs"

@@ -5,7 +5,8 @@
   "refmap": "mixins.examplemod.refmap.json",
   "compatibilityLevel": "JAVA_8",
   "client": [
-    "MixinMinecraft"
+    "MixinMinecraft",
+    "XRayMixin"
   ],
   "injectors": {
     "defaultRequire": 1
