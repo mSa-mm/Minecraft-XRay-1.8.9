@@ -1,43 +1,55 @@
-# Template for Forge 1.8.9 + Mixins
+# Simple 1.8.9 X-Ray Mod
 
-**Note:** I have only tested this with IntelliJ, but it should work with Eclipse just fine.
+A lightweight, client-side X-Ray mod for Minecraft 1.8.9 built using Forge and Mixin.
 
-## Introduction
+This project was created as a learning exercise to understand the fundamentals of Minecraft game hacking, Mixin injection, and Forge event handling.
 
-This repository includes a plug-and-play project template for 1.8.9 Forge Development with Mixins.
+## Features
 
-It contains an example mod with an example mixin (`MixinMinecraft.java`).
+*   **Toggleable X-Ray:** Press `X` to toggle the X-Ray on and off.
+*   **Ore Filtering:** Hides all standard blocks (stone, dirt, etc.) while leaving ores, diamonds, emeralds, and chests visible.
+*   **In-Game Feedback:** Displays a chat message when toggled on or off.
 
-## Setup
+## Requirements
 
-1. Download or clone this repository
-2. Open it as a Project
-3. The gradle setup should be running automatically, if not, use `./gradlew`
-4. Run the gradle task `gradle setupDecompWorkspace` (if you are getting the error "Heap Memory too low", increase the memory by adding `-Xmx4G` or `-Xmx8G` to the gradle task, depending on how much RAM you have; Right-Click the Gradle Task -> Modify Run Configuration... -> Modify Options -> Add VM Options)
-5. If the setup is done, try to run the client with the example mod (use my prebuilt task `gradle buildCopyToRunModsAndRun` if you want -> combines building, copying to the run mods folder and running)
-6. Nice! You just setup your working environment for 1.8.9 Forge Development with Mixins! If everything worked correctly you should find the following three things in your console:
-   1. `[ExampleMod] Injecting with IFMLLoadingPlugin.`
-   2. `Mixin worked!`
-   3. `DIRT BLOCK >> tile.dirt`
+*   **Minecraft Version:** 1.8.9
+*   **Mod Loader:** Minecraft Forge (11.15.1.2318 or similar)
+*   **Java:** JDK 8 (Required for building)
 
-## Post-Setup
+## Building from Source
 
-Do the TODOs that are marked in:
+1.  Ensure you have **JDK 8** installed and set as your `JAVA_HOME`.
+2.  Clone the repository:
+    ```bash
+    git clone https://github.com/mSa-mm/Minecraft-XRay-1.8.9
+3. Open the project folder in your terminal or IDE (VS Code, IntelliJ, etc.).
+4. Build the mod using Gradle: gradlew build or ./gradlew build
+5. The compiled .jar file will be located in build/libs/(e.g., examplemod-1.0.jar).
 
-- `build.gradle`
-- `src/main/java/com/example/examplemod/mixins/MixinLoader.java`
+Installation
 
-Change the data in the `resources/mcmod.info` and rename and change the data of `resources/mixins.examplemod.json`
+    Install Minecraft Forge for 1.8.9 .
 
-## Need help?
+    Locate your .minecraft/mods folder.
 
-If you followed these steps but something went wrong, you can open an issue or contact me (see contact options on my profile), I am happy to help!
+    Drop the compiled .jar file into the mods folder.
 
-## License
+    Launch the game using the Forge 1.8.9 profile.
 
-You can read all the applying licenses in the file `LICENSE.md`
+Usage
 
-## Support
+    Join a single-player world or a private server (ensure the server version is 1.8.9).
 
-If you like this project, feel free to support me!<br><br>
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/manuthebyte)
+    Press X to enable X-Ray.
+
+    Press X again to disable it.
+
+⚠️ Disclaimer
+
+    This mod is intended for educational purposes and for use on private servers where you have permission.
+
+    Using X-Ray on public servers (like Hypixel or other large networks) is considered cheating and will likely result in a ban.
+
+    This mod will not work on servers that use Anti-Xray plugins (like Orebfuscator), as the server will send fake block data to your client.
+
+    The author is not responsible for any bans or consequences resulting from the use of this mod.
